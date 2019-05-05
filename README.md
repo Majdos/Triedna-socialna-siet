@@ -2,12 +2,9 @@
 
 Student social network is platform for students where they can share news, socialize and collaborate.
 
+Original idea was to integrate school's canteen, edupage and social network into one service. After graduation from high school I discontinued the project.
+
 <img src="index_page.png">
-
-## Motivation
-
-Original idea was to integrate school's canteen, edupage and social network into one service. I managed to implement only the social network part,
-because I didn't have enough time to implement reliable web scraper, which would parse data from canteen and edupage.
 
 ## Features
 
@@ -34,5 +31,5 @@ dependencies. It also setups environment.
 
 1. edit following files: .env.database.local, .env.spring.local
 2. run command `./mvnw exec:exec@install exec:exec@dist package`. This command installs and
-compiles dependencies.
+   compiles dependencies.
 3. start containers `docker-compose up`. The web server will listen to port 8080

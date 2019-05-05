@@ -2,6 +2,9 @@
 
 Triedna sociálna sieť je platforma pre študentov, kde môžu zdielať novinky medzi sebou, komunikovať a spolupracovať.
 
+Pôvodným zámerom bolo vytvoriť službu, ktorá by integrovala školskú jedáleň, edupage a prvky sociálnej siete. Po
+absolvovaní strednej školy som ukončil vývoj projektu.
+
 <img src="index_page.png">
 
 ## Motivácia
@@ -32,5 +35,5 @@ závislosti a vytvorí docker kontajneri.
 
 1. upravte následujúce súbory: .env.database.local, .env.spring.local
 2. spuste príkaz `./mvnw exec:exec@install exec:exec@dist package`. Tento
-príkaz skompiluje a nainsštaluje závislosti.
+   príkaz skompiluje a nainsštaluje závislosti.
 3. spustite kontajnery `docker-compose up`. Web server by mal naslúchať na porte 8080.
