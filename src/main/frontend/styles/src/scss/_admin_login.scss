@@ -1,0 +1,19 @@
+.body-center {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height: 100vh;
+}
+
+.spsjm-form {
+    background-color: $body-sm-color;
+    padding: $outer-spacing;
+    border-radius: 0.75rem;
+
+    h1, h2, h3, h4, h5, h6, p, label {
+        color: $primary-color;
+    }
+    .form-group {
+        margin-bottom: $form-group-spacing;
+    }
+}

@@ -1,0 +1,52 @@
+.bottom-search {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 75px;
+    background-color: rgba(49, 75, 91, 0.8);
+}
+
+.bottom-menu {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+
+    .menu-button + .menu-button {
+        margin-left: .25rem;
+    }
+
+    .menu-button, .menu-button:active, .menu-button:focus {
+        padding: 0.675rem 1.05rem;
+        background-color: rgba(49, 75, 91, 0.8);
+        color: #E5E5E5;
+        cursor: pointer;
+        outline: 0;
+        transition: all 0.125s ease-in;
+    
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+
+}
+
+.close-bottom-button, .close-bottom-button:active, .close-bottom-button:focus {
+    align-self: flex-start;
+    margin: 1rem 1rem auto auto;
+    font-size: 1.25em;
+    background: transparent;
+    color: #E5E5E5;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    transition: all 0.125s ease-in;
+    padding: 0;
+
+    &:hover {
+        color: $danger-color;
+    }
+}

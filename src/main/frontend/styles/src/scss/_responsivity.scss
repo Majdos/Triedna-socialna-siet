@@ -1,0 +1,50 @@
+// Extra small devices (portrait phones, less than 576px)
+@mixin small-devices {
+    .article-card {
+        border-radius: 0;
+    }
+
+    body {
+        background-color: $body-sm-color;
+    }
+
+    .loader {
+        border-color: $body-sm-color !important;
+        border-top-color: $primary-color !important;
+    }
+
+    .control-split-div, .split-div {
+        justify-content: center !important;
+        .split-div-right {
+            margin-left: 0.5rem !important;
+        }
+    }
+
+    .table-spsjm {
+        background-color: $body-sm-color
+    }
+
+    .bottom-menu {
+        bottom: 2rem !important;
+        right: 2rem !important;
+    }
+}
+
+@media (max-width: 575px) { 
+    @include small-devices;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) { 
+    @include small-devices;
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) { 
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) { 
+
+}

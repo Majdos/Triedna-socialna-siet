@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-parameters",
+    "@babel/plugin-transform-template-literals",
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
+}

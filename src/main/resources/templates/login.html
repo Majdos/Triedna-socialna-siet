@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>SPŠ J. Murgaša login</title>
+
+<link rel="shortcut icon" type="image/png" th:href="@{~/images/public/favicon.png}" />
+<link rel="stylesheet" th:href="@{~/css/font-awesome/css/font-awesome.min.css}" />
+<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}" />
+
+<link rel="stylesheet" th:href="@{~/css/global.css}" />
+<link rel="stylesheet" th:href="@{~/css/index.css}" />
+
+</head>
+
+<body class="body-center">
+	<nav th:replace="fragments/site_navbar :: navbar"></nav>
+	<div class="container">
+		<div class="row h-100">
+			<form class="spsjm-form col-sm-12 cols-xs-12 col-md-12 offset-lg-2 col-lg-8 offset-xl-2 col-xl-8" th:action="@{~/login}" method="post">
+				<div class="form-header">
+					<img class="form-logo" th:src="@{~/images/public/spsjm.svg}" alt="SPSJM logo" />
+					<h3>Prihlásenie</h3>
+				</div>
+				<div class="form-group">
+					<label for="email">Emailová adresa</label> <input
+						type="email" class="form-control" name="username"
+						id="email" placeholder="Školsky email" />
+				</div>
+				<div class="form-group">
+					<label for="password">Heslo</label> <input
+						type="password" class="form-control" name="password"
+						id="password" placeholder="Heslo" />
+				</div>
+				<button type="submit" value="Sign In" class="btn btn-primary">Prihlásiť sa</button>
+			</form>
+		</div>
+	</div>
+
+	<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js}"></script>
+	<script
+		th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js}"
+		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+		crossorigin="anonymous"></script>
+	<script th:src="@{~/js/bootstrap.min.js}"></script>
+</body>
+
+</html>

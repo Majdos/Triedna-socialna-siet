@@ -1,0 +1,37 @@
+.modal-majo {
+    background-color: $body-sm-color;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.125);
+
+    .card {
+        border: none;
+    }
+}
+
+.form-title {
+    color: $primary-color;
+}
+
+.form-logo + * {
+    margin-left: 1rem;
+}
+
+.form-header {
+    margin-bottom: $form-group-spacing + 0.25;
+    display: flex;
+    align-items: center;
+    .form-logo {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 70px;
+    }
+    .form-text {
+        line-height: 70px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-spsjm fixed-top bg-light"
+	th:fragment="navbar">
+	<a class="navbar-brand" th:href="@{~/}"> <img
+		src="/images/public/spsjm.svg" width="50" height="50" alt="" /> SPS
+		J. Murgasa
+	</a>
+
+	<div>
+		<button class="navbar-toggler" id="menuToggle" type="button"
+			data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</div>
+
+	<!-- Prvky menu, ktore su skryte ak zariadenie je mensie ako lg(tablet + mobil) -->
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" th:href="@{~/trieda}">Moja
+					trieda</a></li>
+			<li class="nav-item"><a class="nav-link" th:href="@{~/groups}">Skupiny</a>
+			</li>
+			<li class="nav-item"
+				th:if="${permissions != null and permissions.contains('ADMIN')}"><a
+				class="nav-link" th:href="|/group/${group.name}/admin|">Admin</a></li>
+		</ul>
+
+		<div th:if="${user} != null" class="btn-group user-panel ml-auto">
+			<a class="btn btn-primary text-white" th:inline="text">
+				<i class="fa fa-lg fa-user" aria-hidden="true"></i>
+				[[${user.getFirstname()}]] [[${user.getLastname()}]]
+			</a> <a class="btn btn-primary" th:href="@{~/logout}"><i
+				class="fa fa-lg fa-sign-out"></i></a>
+		</div>
+		<a th:if="${user} == null" class="ml-auto btn btn-primary"
+			href="/login"><i class="fa fa-sign-in"></i> Login</a>
+	</div>
+</nav>

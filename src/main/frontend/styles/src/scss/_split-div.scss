@@ -1,0 +1,22 @@
+.split-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .split-div-left, .split-div-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        * + * {
+            margin-left: 0.5rem; 
+        }
+
+    }
+
+    .split-div-right {
+        margin-left: auto;
+    }
+}

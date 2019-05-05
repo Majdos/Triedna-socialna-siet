@@ -1,0 +1,30 @@
+.loader-wrapper {
+    position: relative;
+
+    & > p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.loader {
+    border-color: $body-color;
+    border-style: solid; 
+    border-radius: 50%;
+    border-top-color: $primary-color;
+}
+
+.article-loader {
+    margin: $article-spacing * 2 auto; 
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

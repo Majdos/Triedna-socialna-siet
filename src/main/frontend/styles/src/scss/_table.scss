@@ -1,0 +1,41 @@
+.thead-spsjm {
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+.table-spsjm {
+    background-color: $body-color;
+
+    th {
+        border: $primary-color;
+        margin-bottom: 0;
+    }
+
+    tbody tr {
+        background-color: #fff;
+    }
+
+    tr + tr {
+        border-top: 1px solid $body-color;
+    }
+}
+
+.row-fade {
+    opacity: 0.4;
+}
+
+.row-error {
+    border: 1px solid $danger-color !important;
+}
+
+.table-error-messages {
+    margin-bottom: $outer-spacing;
+    * + * {
+        margin-top: article-inner-spacing;
+    }
+}
+
+.admin-table {
+    border-radius: 5px;
+}

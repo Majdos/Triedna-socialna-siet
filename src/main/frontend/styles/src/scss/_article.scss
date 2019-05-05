@@ -1,0 +1,32 @@
+.articles .row + .row, #news-feed > * + * {
+    margin-top: 2rem;
+}
+
+.article-card {
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.article-comments {
+    margin-top: $article-spacing;
+
+    & > * + * {
+        margin-top: $article-inner-spacing
+    }
+
+    .card-body > * + *, form > * + * {
+        margin-top: $article-inner-spacing * 0.8;
+    }
+
+}
+
+.comment-controls, .controls {
+    * + * {
+        margin-left: 0.5rem; 
+    }
+}
+
+.more-comments-panel, .flex-center {
+    display: flex;
+    justify-content: center;
+}

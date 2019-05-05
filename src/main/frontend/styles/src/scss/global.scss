@@ -1,0 +1,53 @@
+@import "variables";
+@import "navbar";
+@import "admin_login";
+@import "forms";
+@import "split-div";
+@import "responsivity";
+@import "bottom-menu";
+@import "loader";
+@import "modal";
+
+.top-spacing {
+    margin-top: $outer-spacing;
+}
+
+.container {
+    padding-bottom: $outer-spacing;
+    .row + .row {
+        margin-top: $outer-spacing;
+    }
+}
+
+.btn-link, .btn-link:active {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.full-screen {
+    height: 100vh;
+    width: 100vw;
+    max-width:100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 82px;
+}
+
+.dimension-as-parent {
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    * + * {
+        margin-left: 0.5rem; 
+    }
+}
+
+.domain-item {
+    font-size: 1.5em;
+}
+
+.text-limit {
+    max-width: 80ch;
+}

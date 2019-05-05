@@ -1,0 +1,60 @@
+spring:
+  thymeleaf:
+    cache: true
+    mode: HTML5
+    encoding: UTF-8
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      use-new-id-generator-mappings: false
+#    properties.javax.persistence.schema-generation.create-source: metadata
+#    properties.javax.persistence.schema-generation.scripts.action: create
+#    properties.javax.persistence.schema-generation.scripts.create-target: create_stable.sql
+#    properties.javax.persistence.schema-generation.scripts.drop-target: drop.sql
+  datasource:
+    url: ${MYSQL_DB_URL}
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+  data:
+    rest:
+      base-path: /api
+  http:
+    encoding:
+      charset: UTF-8
+
+security:
+  oauth2:
+    client:
+      clientId: ${GOOGLE_OATH2_CLIENT_ID}
+      clientSecret: ${GOOGLE_OATH2_CLIENT_SECRET}
+      accessTokenUri: https://accounts.google.com/o/oauth2/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+      scope:
+        - openid
+        - email
+        - profile
+
+    resource:
+      userInfoUri: https://www.googleapis.com/oauth2/v2/userinfo
+
+domains:
+  allowed-domains: ${ALLOWED_DOMAINS}
+
+#logging:
+#  level:
+#    ROOT: DEBUG
+#    org:
+#      hibernate:
+#        SQL: DEBUG
+#        type:
+#          descriptor:
+#            sql:
+#              BasicBinder: TRACE
+management:
+  endpoints:
+    jmx:
+      unique-names: true

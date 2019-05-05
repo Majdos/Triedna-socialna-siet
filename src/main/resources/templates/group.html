@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<title>Stredna priemyselna skola Jozefa Murgasa</title>
+
+<link rel="shortcut icon" type="image/png" th:href="@{~/images/public/favicon.png}" />
+<link rel="stylesheet" th:href="@{~/css/font-awesome/css/font-awesome.min.css}" />
+<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}" />
+
+<link rel="stylesheet" th:href="@{~/css/index.css}" />
+<link rel="stylesheet" th:href="@{~/css/global.css}" />
+
+<script type="text/javascript" th:inline="javascript">
+	const groupLink = [[${groupLink}]];
+	const isLoggedIn = [[${user != null}]];
+	const permissions = [[${permissions}]].split(', ');
+</script>
+
+</head>
+
+<body>
+
+	<nav th:replace="fragments/site_navbar :: navbar"></nav>
+
+
+	<div class="jumbotron jumbotron-fluid" th:style="|background-image: url('${group.imagePath}');|"
+		th:if="${group.imagePath != null}">
+		<h1 class="display-3 text-center" th:text="${group.name}"></h1>
+		<p class="lead text-center" th:text="${group.description}"></p>
+	</div>
+
+	<div class="container">
+
+		<!-- Vygeneruj news feed -->
+		<div id="news-feed"></div>
+
+	</div>
+
+	<div class="footer"></div>
+	<script th:src="@{~/js/commons.js}"></script>
+	<script th:src="@{~/js/group.js}"></script>
+	<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js}"></script>
+	<script
+		th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js}"
+		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+		crossorigin="anonymous"></script>
+        <script th:src="@{~/js/bootstrap.min.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+@import "variables";
+
+.group-list {
+    width: 100%;
+    height: 100%;
+}
+
+.group-card-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &:first-child {
+        margin-left: 2rem;
+    }
+
+    &:last-child {
+        margin-right: 2rem;
+    }
+
+    .blank-card {
+        flex: 1 1 0;
+    }
+
+    .group-card {
+        flex: 1 1 0;
+        transition: all 0.125s ease-in;
+        &:hover {
+            box-shadow: 0 0 20px 0 rgba(125, 125, 125, 0.5);
+        }
+    }
+
+    .group-card + .group-card {
+        margin-left: 2rem;
+    }
+}
+
+#group-search-container {
+    padding: 1rem 0;
+
+    label {
+        color: #E5E5E5;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+    
+    small {
+        color: #BFBFBF !important;
+    }
+}

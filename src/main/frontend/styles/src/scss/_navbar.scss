@@ -1,0 +1,30 @@
+.navbar {
+    background-color: white;
+}
+
+.navbar + .container, .navbar + .jumbotron {
+    padding-top: $navbar-height;
+}
+
+.navbar + .container > #news-feed {
+    padding-top: $outer-spacing;
+}
+
+.navbar-collapse-custom {
+    width: 100%;
+
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        input {
+            flex: 3 1 auto;
+        }
+        button {
+            flex: 1 3 auto;
+        }
+    }
+}
+
+.user-panel {
+    min-width: 200px;
+}
