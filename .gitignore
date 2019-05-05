@@ -22,7 +22,7 @@ src/main/resources/static/*
 
 ### NetBeans ###
 nbproject/private/
-build/
+./build/
 nbbuild/
 dist/
 nbdist/
@@ -33,9 +33,6 @@ node_modules
 
 # testing
 coverage
-
-# production
-build
 
 # misc
 .DS_Store
